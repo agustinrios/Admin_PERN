@@ -3,7 +3,9 @@ import {
   Column,
   Model,
   DataType,
+  Default,
 } from "sequelize-typescript"
+
 
 @Table({
   tableName: 'products'
@@ -20,6 +22,7 @@ class Product extends Model {
   })
   price: string
 
+  @Default(true)
   @Column({
     type: DataType.BOOLEAN
   })
